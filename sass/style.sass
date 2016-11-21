@@ -1,0 +1,48 @@
+$light-color: #FC8612
+$dark-color: #CE33FA
+
+#first
+  background-color: $light-color
+#second
+  background-color: $dark-color
+#third
+  background-color: $light-color
+#fourth
+  background-color: $dark-color
+#fifth
+  background-color: $light-color
+
+div
+  width: 80px
+  height: 80px
+  float: left
+
+=rounded($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+#first
+  +rounded(10px)
+  @extend .box
+  border-color: $dark-color
+#second
+  +rounded(35%)
+  @extend .box
+  border-color: $light-color
+#third
+  +rounded(45%)
+  @extend .box
+  border-color: $dark-color
+#fourth
+  +rounded(90px)
+  @extend .box
+  border-color: $light-color
+#fifth
+  +rounded(2px)
+  @extend .box
+  border-color: $dark-color
+
+.box
+  border: 5px solid
